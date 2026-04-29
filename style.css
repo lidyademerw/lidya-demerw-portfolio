@@ -3,6 +3,16 @@
   padding: 0;
   box-sizing: border-box;
 }
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+  font-family: "poppins", sans-serif;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
 body {
   font-family: "poppins", sans-serif;
   background-color: rgb(255, 255, 255);
@@ -10,28 +20,27 @@ body {
 }
 .container {
   width: 100%;
-  max-width: 1920px;
-  margin: 0;
-  padding: 0 300px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 5%;
 }
 .header {
-  padding-top: flex;
-  justify-content: center;
-  margin-bottom: 2px;
+  padding: 40px 0;
+  width: 100%;
 }
 .header_logo-container {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  margin-bottom: 78px;
-  gap: 40px;
+  margin-bottom: 60px;
+  gap: 30px;
 }
 
 .header_logo-img {
-  height: 120px;
+  height: 100%;
   width: auto;
- flex-shrink: 0;
+  flex-shrink: 0;
 }
 .header__logo-text {
   font-size: 42px;
@@ -46,12 +55,13 @@ body {
   align-items: center;
   border-bottom: 1px solid #eeeeee;
   padding-bottom: 20px;
-  gap: 60px;
+  flex-wrap: wrap;
 }
+
 .header__nav-list {
   display: flex;
   list-style: none;
-  gap: 90px;
+  gap: 40px;
 }
 .header__nav-link {
   text-decoration: none;
@@ -67,13 +77,105 @@ body {
   background-color: #ffbb00;
   columns: black;
   text-decoration: none;
-  padding: 5px 20px;
+  padding: 10px 25px;
   border-radius: 50px;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 16px;
   white-space: nowrap;
   transition: transform 0.2s ease;
 }
 .btn-download::hover {
   transform: scale(1.05);
+}
+@media (max-width: 1024px) {
+  .header_logo-img {
+    height: 70px;
+  }
+  .header__logo-text {
+    font-size: 28px;
+  }
+  .header__nav-list {
+    gap: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .header__nav-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: nowrap;
+    gap: 39px;
+    border-bottom: none;
+  }
+  .header_logo-container {
+    margin-bottom: 30px;
+  }
+  .header__nav-list {
+    justify-content: center;
+    padding-bottom: 10px;
+  }
+  .btn-download {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+}
+@media (max-width: 600px) {
+  .header__nav-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .header_logo-container {
+    margin-bottom: 30px;
+  }
+  .header__nav-list {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    gap: 15px;
+    padding: 0;
+  }
+  .header__nav-list li {
+    width: 100%;
+    text-align: center;
+    border-bottom: 2px solid orange;
+    padding-bottom: 10px;
+  }
+}
+@media (max-width: 480px) {
+  .header__logo-text{
+    font-size: 22px;
+  }
+  .header_logo-img{
+    height: 50px;
+  }
+  .header__nav-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .header_logo-container {
+    margin-bottom: 30px;
+  }
+  .header__nav-list {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    gap: 15px;
+    padding: 0;
+  }
+  .header__nav-list li {
+    width: 100%;
+    text-align: center;
+    border-bottom: 2px solid orange;
+    padding-bottom: 10px;
+  }
+  .header__nav-list li:last-child .header__nav-link {
+        border-bottom: none;
+    }
+    .header__nav-link:hover {
+        background-color: rgba(255, 165, 0, 0.1); /* Subtle orange glow on hover */
+    }
+
 }
