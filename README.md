@@ -8,7 +8,7 @@ Welcome to my professional journey! This project is a fusion of **high-end UI/UX
 Before writing a single line of code, I designed this entire experience in **Adobe Photoshop** using a professional **12-column grid system**. 
 
 ### UI Preview:
-<img width="1927" height="6774" alt="design-preview jpg" src="https://github.com/user-attachments/assets/182ae45d-89ff-4388-b01c-63310c56d34e" />
+<img width="1927" height="6774" alt="My Portfolio Design jpg" src="https://github.com/user-attachments/assets/182ae45d-89ff-4388-b01c-63310c56d34e" />
 
 
 ---
