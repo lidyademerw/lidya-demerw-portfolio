@@ -1,3 +1,4 @@
+<img width="1927" height="6774" alt="design-preview jpg" src="https://github.com/user-attachments/assets/0b8a9b18-ee7b-4d37-85d8-f9a8042c9e75" />
 # 🚀 Full-Stack Design Portfolio | Lidya Demerw
 
 Welcome to my professional journey! This project is a fusion of **high-end UI/UX design** and **Full-Stack engineering**. It is built to bridge the gap between creative vision and functional code.
@@ -8,7 +9,7 @@ Welcome to my professional journey! This project is a fusion of **high-end UI/UX
 Before writing a single line of code, I designed this entire experience in **Adobe Photoshop** using a professional **12-column grid system**. 
 
 ### UI Preview:
-<img width="1927" height="6774" alt="Portfolio Design.jpg" src="https://github.com/user-attachments/assets/182ae45d-89ff-4388-b01c-63310c56d34e" />
+<img width="1927" height="6774" alt="design-preview jpg" src="https://github.com/user-attachments/assets/bbdcd055-ebb8-404c-a82d-5c56b8006d5c" />
 
 
 ---
