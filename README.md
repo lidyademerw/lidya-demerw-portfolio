@@ -1,4 +1,4 @@
-<img width="1927" height="6774" alt="design-preview jpg" src="https://github.com/user-attachments/assets/0b8a9b18-ee7b-4d37-85d8-f9a8042c9e75" />
+
 # 🚀 Full-Stack Design Portfolio | Lidya Demerw
 
 Welcome to my professional journey! This project is a fusion of **high-end UI/UX design** and **Full-Stack engineering**. It is built to bridge the gap between creative vision and functional code.
