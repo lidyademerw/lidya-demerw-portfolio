@@ -19,10 +19,10 @@ body {
   color: #1a1a1a;
 }
 .container {
-  width: 100%;
-  max-width: 1400px;
+  width: 90%;
+  max-width: 1620px;
   margin: 0 auto;
-  padding: 0 5%;
+  padding: 0;
 }
 .header {
   padding: 40px 0;
@@ -77,15 +77,16 @@ body {
   background-color: #ffbb00;
   columns: black;
   text-decoration: none;
-  padding: 10px 25px;
+  padding: 12px 25px;
   border-radius: 50px;
   font-weight: 600;
   font-size: 16px;
   white-space: nowrap;
   transition: transform 0.2s ease;
 }
-.btn-download::hover {
-  transform: scale(1.05);
+.menu-checkbox,
+.menu-trigger {
+  display: none;
 }
 @media (max-width: 1024px) {
   .header_logo-img {
@@ -129,6 +130,26 @@ body {
   .header_logo-container {
     margin-bottom: 30px;
   }
+  .menu-trigger {
+    display: block;
+    position: absolute;
+    top: 100px;
+    right: 16px;
+    font-size: 30;
+    color: #1a1a1a;
+    cursor: pointer;
+    z-index: 10000;
+    transition: transform 0.4s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+  }
+  .menu-checkbox:checked ~ .menu-trigger {
+    transform: rotate(180deg);
+    color: rgb(78, 244, 244);
+  }
   .header__nav-list {
     flex-direction: column;
     width: 100%;
@@ -142,12 +163,59 @@ body {
     border-bottom: 2px solid orange;
     padding-bottom: 10px;
   }
+  .header__nav-link {
+    display: block;
+    padding: 20px 0;
+    font-size: 22px;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .header__nav-list li:last-child .header__nav-link {
+    border-bottom: none;
+  }
+  .header__nav-link:hover {
+    background-color: rgba(223, 166, 34, 0.1);
+  }
+  .menu-close {
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 40px;
+    color: #ff4400;
+    font-family: Arial;
+    cursor: pointer;
+  }
+
+  .header__nav {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    background-color: #f0f4f6;
+
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70vh;
+    padding-top: 80px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    text-align: center;
+    padding-top: 80px;
+    transform: translateY(-100%);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+    z-index: 9999;
+    padding-top: 80px;
+  }
+  .menu-checkbox:checked ~ .header__nav {
+    transform: translateY(0);
+  }
 }
 @media (max-width: 480px) {
-  .header__logo-text{
+  .header__logo-text {
     font-size: 22px;
   }
-  .header_logo-img{
+  .header_logo-img {
     height: 50px;
   }
   .header__nav-wrapper {
@@ -158,6 +226,27 @@ body {
   .header_logo-container {
     margin-bottom: 30px;
   }
+  .menu-trigger {
+    display: block;
+    position: absolute;
+    top: 100px;
+    right: 16px;
+    font-size: 30;
+    color: #1a1a1a;
+    cursor: pointer;
+    z-index: 10000;
+    transition: transform 0.4s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+  }
+  .menu-checkbox:checked ~ .menu-trigger {
+    transform: rotate(180deg);
+    color: rgb(78, 244, 244);
+  }
+
   .header__nav-list {
     flex-direction: column;
     width: 100%;
@@ -172,10 +261,44 @@ body {
     padding-bottom: 10px;
   }
   .header__nav-list li:last-child .header__nav-link {
-        border-bottom: none;
-    }
-    .header__nav-link:hover {
-        background-color: rgba(255, 165, 0, 0.1); /* Subtle orange glow on hover */
-    }
+    border-bottom: none;
+  }
+  .header__nav-link:hover {
+    background-color: rgba(223, 166, 34, 0.1);
+  }
+  .header__nav-link {
+    display: block;
+    padding: 20px 0;
+    font-size: 22px;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .header__nav-list li:last-child .header__nav-link {
+    border-bottom: none;
+  }
 
+  .header__nav {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    background-color: #f0f4f6;
+
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    padding-top: 80px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    text-align: center;
+    padding-top: 80px;
+    transform: translateY(-100%);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+    z-index: 9999;
+    padding-top: 80px;
+    margin: 0 auto;
+  }
+  .menu-checkbox:checked ~ .header__nav {
+    transform: translateY(0);
+  }
 }
