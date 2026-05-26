@@ -80,7 +80,7 @@
             I provide high quality design and development solutions
           </p>
         </div>
-        <div class="services__grid">
+        <div class="services__grid reveal">
           <div class="service-card">
             <div class="service-card__icon">
               <img src="assets/ui.ux design.png" alt="design icon" />
@@ -118,14 +118,19 @@
       <div class="container">
         <div class="projects__header">
           <h2 class="projects__title">Latest Projects</h2>
-          <a href="#" class="projects__see-all">See All</a>
+          <a
+            href="javascript:void(0)"
+            id="see-all-btn"
+            class="projects__see-all"
+            >See All →</a
+          >
         </div>
-        <div class="projects__filters">
+        <div class="projects__filters reveal">
           <button class="filter-btn filter-btn--active">All</button>
           <button class="filter-btn">UI/UX Design</button>
           <button class="filter-btn">Frontend</button>
         </div>
-        <div class="projects__grid">
+        <div class="projects__grid  reveal">
           <!-- Project 1 -->
           <div class="project-card">
             <div class="project-card__image-box">
@@ -168,17 +173,58 @@
               </div>
             </div>
           </div>
+          <!-- Hidden Project 4 -->
+          <div class="project-card project-card--hidden">
+            <div class="project-card__image-box">
+              <img src="assets/mobile.png" alt="Project 4" />
+            </div>
+            <div class="project-card__content">
+              <h3>Mobile App Design</h3>
+              <div class="project-card__tags">
+                <span>UI/UX</span>
+                <span>Frontend</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hidden Project 5 -->
+          <div class="project-card project-card--hidden">
+            <div class="project-card__image-box">
+              <img src="assets/brand.png" alt="Project 5" />
+            </div>
+            <div class="project-card__content">
+              <h3>Brand Identity</h3>
+              <div class="project-card__tags">
+                <span>UI/UX</span>
+                <span>Frontend</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hidden Project 6 -->
+          <div class="project-card project-card--hidden">
+            <div class="project-card__image-box">
+              <img src="assets/portifolio.png" alt="Project 6" />
+            </div>
+            <div class="project-card__content">
+              <h3>Portfolio Design</h3>
+              <div class="project-card__tags">
+                <span>UI/UX</span>
+                <span>Frontend</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
     <section class="about" id="about">
-      <div class="container about__container">
+      <div class="container about__container  reveal">
         <div class="about__image-box">
           <img src="assets/about me photo.png" alt="about__img" />
         </div>
         <div class="about__content">
-          <p class="about__tag">ABOUT ME</p>
-          <h2 class="about__title">
+          <p class="about__tag  ">ABOUT ME</p>
+          <h2 class="about__title ">
             Designing Solutions, <br />
             Not Just Visuals
           </h2>
@@ -215,7 +261,7 @@
     </section>
     <section class="cta">
       <div class="container cta__container">
-        <div class="cta__content">
+        <div class="cta__content  reveal">
           <h2 class="cta__title">Have a project in mind?</h2>
           <p class="cta__subtitle">Let's work together!</p>
         </div>
@@ -227,15 +273,15 @@
         </a>
       </div>
     </section>
-    <footer class="footer">
+    <footer class="footer  ">
       <div class="container footer__container">
         <div class="ooter__col footer__brand">
           <div class="header_logo-container">
-            <img src="assets/logo.png" alt="logo" class="header_logo-img" />
-            <span class="header__logo-text">Lidya Demerw</span>
+            <img src="assets/logo.png" alt="logo" class="header_logo-img  reveal" />
+            <span class="header__logo-text  reveal">Lidya Demerw</span>
           </div>
         </div>
-        <div class="footer__col">
+        <div class="footer__col  reveal">
           <h3 class="footer__title">Menu links</h3>
           <ul class="footer__list">
             <li><a href="#home">Home</a></li>
@@ -244,7 +290,7 @@
             <li><a href="#projects">projects</a></li>
           </ul>
         </div>
-        <div class="footer__col">
+        <div class="footer__col  reveal">
           <h3 class="footer__title">Social Media</h3>
           <ul class="footer__list">
             <li><a href="#">Dribbble</a></li>
@@ -253,7 +299,7 @@
             <li><a href="#">Telegram</a></li>
           </ul>
         </div>
-        <div class="footer__col">
+        <div class="footer__col  reveal">
           <h3 class="footer__title">Services</h3>
           <ul class="footer__list">
             <li><a href="#">Branding</a></li>
@@ -266,5 +312,6 @@
         <p class="footer__copyright">Copyright: "© 2026 Lidya"</p>
       </div>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>

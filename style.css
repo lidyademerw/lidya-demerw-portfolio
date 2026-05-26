@@ -20,6 +20,40 @@ body {
   background-color: rgb(255, 255, 255);
   color: #1a1a1a;
 }
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.hero__title {
+  animation: fadeInUp 0.8s ease forwards;
+}
+.hero__subtitle {
+  opacity: 0;
+  animation: fadeInUp 0.3s ease forwards;
+}
+.btn-hero {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards 0.6s;
+}
+.hero__image-box {
+  opacity: 0;
+  animation: fadeInUp 1.2s ease forwards 0.5s;
+}
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
 .container {
   width: 80%;
   max-width: 1620px;
@@ -284,22 +318,32 @@ body {
 }
 .projects__filters {
   display: flex;
+  justify-content: center;
   gap: 15px;
   margin-bottom: 50px;
+  flex-wrap: wrap;
 }
-.projects__filters {
+.filter-btn {
+  background-color: transparent;
+  color: #555555;
+  border: 1px solid #eeeeee;
   padding: 10px 25px;
   border-radius: 50px;
-  border: 1px solid #eee9e9;
-  background: white;
-  cursor: pointer;
+  font-family: "poppins", sans-serif;
   font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
   transition: all 0.3s ease;
 }
-.filter-btn--active,
+.filter-btn--active {
+  background-color: #0e76bc;
+  color: #ffffff;
+  border-color: #0e76bc;
+  box-shadow: 0 5px 15px rgba(14, 118, 188, 0.3);
+}
 .filter-btn:hover {
   background-color: #0e76bc;
-  color: white;
+  color: #0e76bc;
   border-color: #0e76bc;
 }
 .projects__grid {
@@ -514,6 +558,10 @@ body {
   font-size: 13px;
   opacity: 0.6;
 }
+.project-card--hidden {
+  display: none;
+}
+
 @media (max-width: 1024px) {
   .header_logo-img {
     height: 70px;
@@ -534,24 +582,26 @@ body {
     justify-content: center;
     gap: 30px;
   }
+  .btn-hero {
+    padding: 12px 30px;
+    font-size: 16px;
+  }
   .hero__container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
     gap: 20px;
     padding-top: 40px;
   }
   .hero__title {
-    font-size: 50px;
+    font-size: 55px;
     line-height: 1.1;
+    margin-bottom: 15px;
   }
   .hero__main-img {
     max-width: 350px;
   }
   .hero__subtitle {
     font-size: 16px;
-    max-width: 350px;
+    max-width: 400px;
+    margin-bottom: 25px;
   }
   .marquee-stack {
     margin-top: 40px;
@@ -977,5 +1027,13 @@ body {
   .marquee__content span {
     font-size: 14px;
     letter-spacing: 2px;
+  }
+  .projects__filters {
+    gap: 10px;
+    margin-bottom: 30px;
+  }
+  .filter-btn {
+    padding: 8px 18px;
+    font-size: 10px;
   }
 }
